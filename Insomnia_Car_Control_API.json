@@ -1,0 +1,114 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-08-09T18:45:44.533376Z",
+  "__export_source": "insomnia.desktop.app",
+  "resources": [
+    {
+      "_id": "wrk_1",
+      "_type": "workspace",
+      "name": "Car Control API"
+    },
+    {
+      "_id": "env_1",
+      "_type": "environment",
+      "parentId": "wrk_1",
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:3000"
+      }
+    },
+    {
+      "_id": "req_1",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "GET /automoveis",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/automoveis"
+    },
+    {
+      "_id": "req_2",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "POST /automoveis",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/automoveis",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"placa\": \"ABC1234\", \"cor\": \"preto\", \"marca\": \"Fiat\"}"
+      }
+    },
+    {
+      "_id": "req_3",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "GET /motoristas",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/motoristas"
+    },
+    {
+      "_id": "req_4",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "POST /motoristas",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/motoristas",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"nome\": \"Maria Silva\"}"
+      }
+    },
+    {
+      "_id": "req_5",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "GET /utilizacoes",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/utilizacoes"
+    },
+    {
+      "_id": "req_6",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "POST /utilizacoes (start)",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/utilizacoes",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"idAutomovel\": \"<autoId>\", \"idMotorista\": \"<motoristaId>\", \"motivo\": \"Entrega\"}"
+      }
+    },
+    {
+      "_id": "req_7",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "POST /utilizacoes/:id/finalizar",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/utilizacoes/<utilizacaoId>/finalizar"
+    },
+    {
+      "_id": "req_8",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "POST /admin/reset",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/admin/reset"
+    },
+    {
+      "_id": "req_9",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "GET /docs",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/docs"
+    },
+    {
+      "_id": "req_10",
+      "_type": "request",
+      "parentId": "wrk_1",
+      "name": "GET /health",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/health"
+    }
+  ]
+}
